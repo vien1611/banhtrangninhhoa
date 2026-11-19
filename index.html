@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- Security Headers (Fallback for static hosting) -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- SEO & Social Meta Tags -->
+  <title>Bánh Tráng Thủ Công Lâm Thanh — Ninh Hòa | Kế Thừa Làng Nghề Xóm Rượu</title>
+  <meta name="description"
+    content="Cơ sở Bánh Tráng Ninh Hòa Lâm Thanh kế thừa tinh hoa làng nghề Xóm Rượu trăm năm: Bánh ram chiên giòn xốp 8 tiếng, bánh ram vuông dẻo dai 100% gạo quê, bánh mè nhúng phơi liếp tre. Liên hệ xưởng trực tiếp: 0935 746 795 (Chị Thanh) & 0786 222 458 (Anh Lâm).">
+  <meta name="keywords"
+    content="bánh tráng ninh hòa, bánh tráng xóm rượu, bánh tráng lâm thanh, bánh ram chiên giòn, bánh ram cuốn, bánh mè nhúng, đặc sản khánh hòa, xưởng bánh tráng ninh hòa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://banhtranglamthanh.vn/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bánh Tráng Thủ Công Lâm Thanh — Ninh Hòa">
+  <meta property="og:description"
+    content="Kế thừa di sản làng nghề Xóm Rượu, hệ thống xưởng bánh lớn cung ứng toàn quốc. Liên hệ trực tiếp nhà xưởng.">
+  <meta property="og:image" content="picture/xuongbanh-800w.webp">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Google Fonts Optimized (Subset Vietnamese & Latin + font-display: swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap&subset=vietnamese,latin"
+    rel="stylesheet">
+
+  <!-- Performance Preload for LCP (Largest Contentful Paint) -->
+  <link rel="preload" as="image" href="picture/xuong1.png" fetchpriority="high">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data for Local Culinary Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Cơ Sở Sản Xuất Bánh Tráng Lâm Thanh",
+    "image": "picture/xuongbanh-800w.webp",
+    "telephone": "+84935746795",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thị xã Ninh Hòa",
+      "addressRegion": "Khánh Hòa",
+      "addressCountry": "VN"
+    },
+    "servesCuisine": "Đặc sản Ninh Hòa, Bánh tráng nem nướng Xóm Rượu",
+    "founder": [
+      { "@type": "Person", "name": "Hứa Thanh" },
+      { "@type": "Person", "name": "Lâm" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- 1. MINIMAL HEADER WITH CONTACT DROPDOWN (2 OPTIONS: ANH LÂM - CHỊ THANH) -->
+  <header class="site-header" id="topHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Bánh Tráng Lâm Thanh">
+        <div class="brand-symbol">LT</div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Lâm Thanh</span>
+          <span class="brand-subtitle">Ninh Hòa &bull; Di Sản Xóm Rượu</span>
+        </div>
+      </a>
+
+      <!-- Clean Navigation Links (Bỏ đối tác & lặp nút) -->
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-links">
+          <li><a href="#san-pham" class="nav-link">Sản phẩm</a></li>
+          <li><a href="#xom-ruou" class="nav-link">Di sản Xóm Rượu</a></li>
+          <li><a href="#quy-trinh" class="nav-link">Quy trình làm bánh</a></li>
+          <li><a href="#danh-gia" class="nav-link">Đánh giá</a></li>
+        </ul>
+      </nav>
+
+      <!-- Minimal Header Actions: Contact Dropdown with 2 Options -->
+      <div class="header-actions">
+        <!-- Contact Dropdown (Anh Lâm - Chị Thanh) -->
+        <div class="contact-dropdown-wrap" id="contactDropdownWrap">
+          <button type="button" class="contact-trigger-btn" id="contactTriggerBtn" aria-haspopup="true"
+            aria-expanded="false" aria-label="Menu liên hệ">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Liên hệ xưởng</span>
+            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu: 2 Options Chị Thanh - Anh Lâm (Reverse Tabnabbing Protected) -->
+          <div class="contact-dropdown-menu" role="menu">
+            <!-- Option 1: Chị Thanh -->
+            <a href="https://zalo.me/0935746795" target="_blank" rel="noopener noreferrer" class="contact-option-card"
+              role="menuitem">
+              <img src="picture/Thanh.jpg" alt="Chị Thanh" class="contact-avatar">
+              <div class="contact-info">
+                <span class="contact-name">Chị Thanh</span>
+                <span class="contact-phone">📞 0935 746 795</span>
+              </div>
+              <div class="contact-quick-badges">
+                <span class="badge-call-zalo">Zalo</span>
+              </div>
+            </a>
+
+            <!-- Option 2: Anh Lâm -->
+            <a href="https://zalo.me/0786222458" target="_blank" rel="noopener noreferrer" class="contact-option-card"
+              role="menuitem">
+              <img src="picture/Lam.png" alt="Anh Lâm" class="contact-avatar">
+              <div class="contact-info">
+                <span class="contact-name">Anh Lâm</span>
+                <span class="contact-phone">📞 0786 222 458</span>
+              </div>
+              <div class="contact-quick-badges">
+                <span class="badge-call-zalo">Zalo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dòng đó là liên hệ trực tiếp -->
+        <a href="#lien-he" class="btn btn-primary" style="padding: 9px 20px; min-height: 40px; font-size: 0.875rem;">
+          Liên hệ trực tiếp
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở danh mục menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. EDITORIAL HERO SECTION (LƯỚT 2 ẢNH XƯỞNG BÁNH QUA LẠI) -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Column -->
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              Kế Thừa Làng Nghề Xóm Rượu &bull; Ninh Hòa, Khánh Hòa
+            </div>
+
+            <!-- Single H1 Title -->
+            <h1 class="hero-headline">
+              Hạt gạo nắng gió, <br>
+              <em>gói trọn vị quê.</em>
+            </h1>
+
+            <p class="hero-subhead">
+              Từ cái nôi làng nghề Xóm Rượu trăm năm, chúng tôi phát triển thành hệ thống xưởng bánh quy mô lớn, cung
+              ứng bánh tráng nem nướng giòn rụm và dẻo dai nguyên bản đến các nhà hàng, quán ăn trên toàn quốc.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#lien-he" class="btn btn-primary">
+                <span>Liên hệ trực tiếp</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#san-pham" class="btn btn-secondary">
+                Xem các dòng bánh
+              </a>
+            </div>
+
+            <!-- Trust Bar Micro-copy -->
+            <div class="hero-trust-row">
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>100% Gạo quê tự nhiên</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Phơi nắng liếp tre truyền thống</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Năng lực xưởng lớn</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Giá xưởng</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Column (Quy mô ở đầu trang: Lướt 2 ảnh xưởng bánh qua lại) -->
+          <div class="hero-media-wrapper">
+            <div class="hero-badge-tag">
+              <div class="badge-tag-number">Quy Mô</div>
+              <div class="badge-tag-text">Xưởng Bánh Lâm Thanh</div>
+            </div>
+
+            <article class="hero-carousel" aria-label="Hình ảnh quy mô xưởng bánh Lâm Thanh">
+              <div class="hero-carousel-track" id="heroCarouselTrack">
+                <!-- Slide 1: xuong1 -->
+                <div class="hero-carousel-slide">
+                  <img src="picture/xuong1.png" alt="Quy mô xưởng sản xuất bánh tráng Lâm Thanh 1"
+                    width="800" height="1000" fetchpriority="high" loading="eager" decoding="sync">
+                </div>
+
+                <!-- Slide 2: xuong2 -->
+                <div class="hero-carousel-slide">
+                  <img src="picture/xuong2.png" alt="Quy mô xưởng sản xuất bánh tráng Lâm Thanh 2"
+                    width="800" height="1000" loading="lazy" decoding="async">
+                </div>
+
+                <!-- Slide 3: xuong3 -->
+                <div class="hero-carousel-slide">
+                  <img src="picture/xuong3.png" alt="Quy mô xưởng sản xuất bánh tráng Lâm Thanh 3"
+                    width="800" height="1000" loading="lazy" decoding="async">
+                </div>
+
+                <!-- Slide 4: xuongbanh -->
+                <div class="hero-carousel-slide">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="picture/xuongbanh-500w.webp 500w, picture/xuongbanh-800w.webp 800w"
+                      sizes="(max-width: 768px) 100vw, 480px">
+                    <img src="picture/xuongbanh.jpg" alt="Giàn phơi liếp tre xưởng bánh tráng Lâm Thanh Ninh Hòa 1"
+                      width="800" height="1000" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+
+                <!-- Slide 5: xuongbanh2 -->
+                <div class="hero-carousel-slide">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="picture/xuongbanh2-500w.webp 500w, picture/xuongbanh2-800w.webp 800w"
+                      sizes="(max-width: 768px) 100vw, 480px">
+                    <img src="picture/xuongbanh2.jpg" alt="Giàn phơi liếp tre xưởng bánh tráng Lâm Thanh Ninh Hòa 2"
+                      width="800" height="1000" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Carousel Navigation Buttons -->
+              <div class="hero-carousel-controls">
+                <button type="button" class="carousel-btn" id="heroPrevBtn" aria-label="Ảnh xưởng trước">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button type="button" class="carousel-btn" id="heroNextBtn" aria-label="Ảnh xưởng tiếp theo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Indicator Dots -->
+              <div class="hero-carousel-dots" id="heroCarouselDots" aria-hidden="true">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+                <span class="carousel-dot" data-slide="3"></span>
+                <span class="carousel-dot" data-slide="4"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TRIẾT LÝ & CHẤT LƯỢNG (3 Cột Tối Giản Nét Mảnh) -->
+    <section class="section philosophy-section" id="triet-ly">
+      <div class="container">
+        <div class="section-header text-center mx-auto">
+          <span class="section-label">Giá Trị Cốt Lõi</span>
+          <h2 class="section-title">Nét Đẹp Thủ Công Giữa Đời Thường</h2>
+          <p class="section-desc mx-auto">
+            Quy mô xưởng mở rộng nhưng phương thức làm bánh thủ công chưa từng thay đổi: Từng chiếc bánh đều thấm đượm
+            nắng gió vùng quê Ninh Hòa và bàn tay khéo léo của người thợ lành nghề.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <!-- Col 1 -->
+          <article class="philosophy-card">
+            <div class="philosophy-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+            </div>
+            <h3 class="philosophy-title">100% Gạo Quê Chọn Lọc</h3>
+            <p class="philosophy-text">
+              Kế thừa bí quyết Xóm Rượu: chọn loại gạo giữ được lớp cám thơm, ngâm xay nước tự nhiên trong ngày. Tuyệt
+              đối không hàn the, không chất tẩy trắng, giữ trọn vị bùi ngọt thanh khiết.
+            </p>
+          </article>
+
+          <!-- Col 2 -->
+          <article class="philosophy-card">
+            <div class="philosophy-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            </div>
+            <h3 class="philosophy-title">Hong Nắng Liếp Tre Tự Nhiên</h3>
+            <p class="philosophy-text">
+              Bánh được trải cẩn trọng trên từng vỉ tre nẹp thủ công đón gió biển và nắng ấm Ninh Hòa. Quá trình hong
+              sấy tự nhiên giúp bánh dẻo dai, giữ mùi thơm tre mộc đặc trưng.
+            </p>
+          </article>
+
+          <!-- Col 3 -->
+          <article class="philosophy-card">
+            <div class="philosophy-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="philosophy-title">Cung Ứng Chuẩn Quy Mô Lớn</h3>
+            <p class="philosophy-text">
+              Dây chuyền đóng gói khép kín chống ẩm mốc và hạn chế bể vỡ khi gửi xa. Đảm bảo nguồn hàng ổn định quanh
+              năm cho các nhà hàng, quán ăn khắp các tỉnh thành.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DANH MỤC SẢN PHẨM (Không giá, không sấp/ràng - Nút Liên hệ trực tiếp) -->
+    <section class="section product-section" id="san-pham">
+      <div class="container">
+        <div class="section-header text-center mx-auto">
+          <span class="section-label">Danh Mục Đặc Sản</span>
+          <h2 class="section-title">Các Dòng Bánh Tráng Chủ Lực Tận Xưởng</h2>
+          <p class="section-desc mx-auto">
+            Sản xuất trực tiếp tại xưởng Lâm Thanh, tuyển chọn nghiêm ngặt từng đợt bánh, nhận đóng gói theo quy chuẩn
+            riêng cho quán ăn và đối tác phân phối.
+          </p>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Item 1: Bánh Ram Ống Chiên Giòn -->
+          <article class="product-card">
+            <div class="product-badge-flag accent">Bán Chạy Nhất</div>
+            <div class="product-image-container">
+              <picture>
+                <source type="image/webp" srcset="picture/banhram1-500w.webp 500w, picture/banhram1-800w.webp 800w"
+                  sizes="(max-width: 640px) 100vw, 300px">
+                <img src="picture/banhram1.jpg" alt="Bánh ram ống chiên giòn rụm nem nướng Ninh Hòa" width="400"
+                  height="500" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="product-details">
+              <div class="product-spec-row">
+                <span class="product-spec-tag">✓ Chuyên Quán Nem Nướng</span>
+                <span class="product-stars">★★★★★</span>
+              </div>
+              <h3 class="product-name">Bánh Ram Ống Chiên Giòn</h3>
+              <p class="product-desc">
+                Cuộn ống chuẩn size, khi chiên phồng xốp vàng ruộm, đặc biệt giữ độ giòn suốt 8 tiếng mà không hề ngấm
+                dầu hay bị ỉu.
+              </p>
+              <div class="product-footer">
+                <span class="product-delivery-note">Đóng thùng chống ẩm toàn quốc</span>
+                <button type="button" class="btn-contact-item" data-product-name="Bánh Ram Ống Chiên Giòn"
+                  aria-label="Liên hệ trực tiếp Bánh Ram Ống">
+                  <span>Liên hệ trực tiếp</span>
+                </button>
+              </div>
+          </article>
+
+          <!-- Item 2: Bánh Ram Vuông Cuốn Nem -->
+          <article class="product-card">
+            <div class="product-badge-flag">Gạo Thuần Khiết</div>
+            <div class="product-image-container">
+              <picture>
+                <source type="image/webp" srcset="picture/banhcuon1-500w.webp 500w, picture/banhcuon1-800w.webp 800w"
+                  sizes="(max-width: 640px) 100vw, 300px">
+                <img src="picture/banhcuon1.jpg" alt="Bánh ram vuông cuốn rau nem nướng dẻo dai" width="400"
+                  height="500" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="product-details">
+              <div class="product-spec-row">
+                <span class="product-spec-tag">✓ Dẻo Dai Không Rách</span>
+                <span class="product-stars">★★★★★</span>
+              </div>
+              <h3 class="product-name">Bánh Ram Vuông Cuốn Nem</h3>
+              <p class="product-desc">
+                Độ mỏng đồng đều, mềm mịn tự nhiên từ hạt gạo quê; không cần nhúng nhiều nước, dễ dàng cuộn chặt tay với
+                rau sống và nem nướng.
+              </p>
+              <div class="product-footer">
+                <span class="product-delivery-note">Đóng gói theo yêu cầu đối tác</span>
+                <button type="button" class="btn-contact-item" data-product-name="Bánh Ram Vuông Cuốn Nem"
+                  aria-label="Liên hệ trực tiếp Bánh Ram Vuông">
+                  <span>Liên hệ trực tiếp</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Bánh Mè Nhúng Liếp Tre -->
+          <article class="product-card">
+            <div class="product-badge-flag">Hạt Mè Rang Thơm</div>
+            <div class="product-image-container">
+              <picture>
+                <source type="image/webp" srcset="picture/banhme2-500w.webp 500w, picture/banhme2-800w.webp 800w"
+                  sizes="(max-width: 640px) 100vw, 300px">
+                <img src="picture/banhme2.jpg" alt="Bánh tráng mè nhúng phơi liếp tre thơm hạt mè" width="400"
+                  height="500" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="product-details">
+              <div class="product-spec-row">
+                <span class="product-spec-tag">✓ Đậm Vị Truyền Thống</span>
+                <span class="product-stars">★★★★★</span>
+              </div>
+              <h3 class="product-name">Bánh Mè Nhúng Liếp Tre</h3>
+              <p class="product-desc">
+                Bánh dày vừa vặn điểm xuyết hạt mè rang thơm béo ngậy; nhúng nước mềm mại cuốn cá hấp, thịt luộc hoặc
+                nướng giòn ăn vặt.
+              </p>
+              <div class="product-footer">
+                <span class="product-delivery-note">Phơi nẹp tre mộc thơm lúa mới</span>
+                <button type="button" class="btn-contact-item" data-product-name="Bánh Mè Nhúng Liếp Tre"
+                  aria-label="Liên hệ trực tiếp Bánh Mè Nhúng">
+                  <span>Liên hệ trực tiếp</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Dòng Bánh Tráng Đặt Theo Quy Cách -->
+          <article class="product-card">
+            <div class="product-badge-flag accent">Cung Ứng Lớn</div>
+            <div class="product-image-container">
+              <picture>
+                <source type="image/webp" srcset="picture/banhcuon2-500w.webp 500w, picture/banhcuon2-800w.webp 800w"
+                  sizes="(max-width: 640px) 100vw, 300px">
+                <img src="picture/banhcuon2.jpg" alt="Dòng bánh tráng đặc sản đặt theo quy cách xưởng Lâm Thanh"
+                  width="400" height="500" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="product-details">
+              <div class="product-spec-row">
+                <span class="product-spec-tag">✓ Đơn Hàng Sỉ & Chuỗi Quán</span>
+                <span class="product-stars">★★★★★</span>
+              </div>
+              <h3 class="product-name">Bánh Tráng Theo Quy Cách</h3>
+              <p class="product-desc">
+                Nhận đặt hàng số lượng lớn theo độ dày, kích thước vuông/tròn và quy cách đóng gói riêng cho các hệ
+                thống nhà hàng khắp cả nước.
+              </p>
+              <div class="product-footer">
+                <span class="product-delivery-note">Chính sách ưu đãi giá gốc tận xưởng</span>
+                <button type="button" class="btn-contact-item" data-product-name="Bánh Tráng Theo Quy Cách"
+                  aria-label="Liên hệ trực tiếp dòng đặt riêng">
+                  <span>Liên hệ trực tiếp</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CÂU CHUYỆN NGHỀ: TỪ DI SẢN XÓM RƯỢU ĐẾN HỆ THỐNG XƯỞNG BÁNH LỚN -->
+    <section class="section story-section" id="xom-ruou">
+      <div class="container">
+        <div class="split-grid">
+          <!-- Media Column (Hình ảnh xưởng bánh 2) -->
+          <div class="story-media-stack" id="quy-trinh">
+            <div class="story-img-main">
+              <picture>
+                <source type="image/webp" srcset="picture/xuongbanh2-500w.webp 500w, picture/xuongbanh2-800w.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 540px">
+                <img src="picture/xuongbanh2.jpg" alt="Khuôn viên giàn phơi liếp tre xưởng bánh Lâm Thanh Ninh Hòa"
+                  width="800" height="600" loading="lazy" decoding="async">
+              </picture>
+            </div>
+
+            <div class="story-floating-stat">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Năm Lửa Nghề Xóm Rượu</div>
+            </div>
+          </div>
+
+          <!-- Story & Development Content -->
+          <div class="story-content">
+            <span class="section-label">Di Sản Trăm Năm</span>
+            <h2 class="section-title">Từ Lửa Nghề Xóm Rượu Đến Hệ Thống Xưởng Lớn</h2>
+
+            <p class="story-lead">
+              Nằm quanh khu vực di tích Gò Lăng Bà Vú tại thị xã Ninh Hòa, <strong>Xóm Rượu</strong> từ bao đời nay đã
+              nức tiếng là cái nôi của nghề tráng bánh truyền thống. Từ những ngày đầu người dân di cư mang theo nghề
+              tráng bánh cuốn chả, cả xóm đã luôn rực sáng ánh lửa lò từ 3-4 giờ sáng, tiếng xay bột, tiếng lật vỉ tre
+              rộn rã đón ánh nắng ban mai.
+            </p>
+          </div>
+
+          <div class="story-quote-box">
+            "Bánh tráng Xóm Rượu đặc biệt ở chỗ phải chọn loại gạo giữ được chất cám thơm bùi. Tráng bột trên nồi hơi
+            căng vải, phơi trên vỉ liếp tre thoa dầu phụng, canh nắng lật trở liên tục để chiếc bánh đạt độ dẻo thơm
+            nguyên bản."
+            <br><small style="font-weight: 600; color: var(--text-primary); font-style: normal;">— Trích tư liệu Di
+              sản Làng nghề Ninh Hòa (Báo Khánh Hòa)</small>
+          </div>
+
+          <div class="process-steps-list">
+            <div class="process-step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Kế Thừa Bí Quyết Gạo Cám & Nồi Hơi Vải Căng</h4>
+                <p>Cơ sở Lâm Thanh gìn giữ trọn vẹn công thức xay bột lúa mới giữ nguyên chất cám dinh dưỡng của cha
+                  ông, đảm bảo từng mẻ bánh mềm mượt tự nhiên.</p>
+              </div>
+            </div>
+
+            <div class="process-step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Phát Triển Quy Mô Xưởng Sản Xuất Lớn</h4>
+                <p>Từ những chiếc lò than gia đình nhỏ lẻ, Lâm Thanh đã đầu tư mở rộng diện tích xưởng, hệ thống hàng
+                  trăm giàn phơi liếp tre sạch sẽ, chuẩn bị năng lực cung ứng hàng tấn bánh mỗi ngày.</p>
+              </div>
+            </div>
+
+            <div class="process-step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Đóng Gói Chuyên Nghiệp & Phân Phối Toàn Quốc</h4>
+                <p>Quy trình đóng gói thùng bảo quản chuyên dụng giúp bánh giữ trọn độ giòn xốp và dẻo dai nguyên bản
+                  từ lò Xóm Rượu chuyển đến tận tay các quán ăn trên khắp 3 miền.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ĐÁNH GIÁ / REVIEW CỦA KHÁCH HÀNG (1-5 SAO) -->
+    <section class="section reviews-section" id="danh-gia">
+      <div class="container">
+        <div class="section-header text-center mx-auto">
+          <span class="section-label">Đánh Giá Từ Khách Hàng</span>
+          <h2 class="section-title">Khách Hàng & Đối Tác Nói Gì?</h2>
+          <p class="section-desc mx-auto">
+            Hơn 500+ chuỗi quán nem nướng, nhà hàng đặc sản và gia đình trên toàn quốc tin tưởng lựa chọn bánh tráng Lâm Thanh.
+          </p>
+          <div class="reviews-summary-badge">
+            <span class="summary-score">4.9 / 5.0</span>
+            <div class="stars-group" aria-label="Đánh giá 5 sao">
+              ★★★★★
+            </div>
+            <span class="summary-count">(512 lượt đánh giá thực tế)</span>
+          </div>
+        </div>
+
+        <!-- Bộ lọc sao (1-5 Sao) -->
+        <div class="reviews-filter-bar">
+          <button type="button" class="review-filter-btn active" data-filter="all">Tất Cả (6)</button>
+          <button type="button" class="review-filter-btn" data-filter="5">5 Sao ★★★★★ (5)</button>
+          <button type="button" class="review-filter-btn" data-filter="4">4 Sao ★★★★☆ (1)</button>
+          <button type="button" class="review-filter-btn" data-filter="3">3 Sao ★★★☆☆ (0)</button>
+        </div>
+
+        <!-- Grid thẻ đánh giá -->
+        <div class="reviews-grid" id="reviewsGrid">
+          <!-- Review 1: 5 sao -->
+          <article class="review-card" data-rating="5">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <span class="review-date">2 ngày trước</span>
+            </div>
+            <p class="review-comment">
+              "Bánh ram ống của xưởng Lâm Thanh chiên lên vàng xốp, giòn rụm suốt 8 tiếng mà không hề bị ỉu hay ngấy dầu. Khách đến ăn nem nướng ai cũng tấm tắc khen. Nhập hàng đều đặn 3 năm nay chưa từng thất vọng."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">MT</div>
+              <div class="author-meta">
+                <h4 class="author-name">Anh Minh Trí</h4>
+                <p class="author-role">Chủ Quán Nem Nướng Nha Trang (Quận 3, TP.HCM)</p>
+                <span class="verified-tag">✓ Đã hợp tác 3 năm (Nhập sỉ định kỳ)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2: 5 sao -->
+          <article class="review-card" data-rating="5">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <span class="review-date">5 ngày trước</span>
+            </div>
+            <p class="review-comment">
+              "Bánh ram vuông cuốn rau dẻo dai nguyên bản từ gạo quê, nhúng nước cuốn không bị rách bở như bánh pha bột năng. Đóng gói thùng xốp gửi ra Hà Nội rất kỹ càng, bánh nguyên vẹn không bị vỡ góc."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">NH</div>
+              <div class="author-meta">
+                <h4 class="author-name">Chị Ngọc Hương</h4>
+                <p class="author-role">Quán Đặc Sản Cuốn Đất Quảng (Cầu Giấy, Hà Nội)</p>
+                <span class="verified-tag">✓ Đang nhập sỉ hàng tuần</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3: 5 sao -->
+          <article class="review-card" data-rating="5">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <span class="review-date">1 tuần trước</span>
+            </div>
+            <p class="review-comment">
+              "Liên hệ trực tiếp Chị Thanh với Anh Lâm trao đổi rất nhanh, giá gốc tận xưởng không qua trung gian. Bánh mè nhúng nướng giòn thơm phức mùi liếp tre nẹp truyền thống, khách quán nhậu gọi liên tục."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">HN</div>
+              <div class="author-meta">
+                <h4 class="author-name">Chú Hoàng Nam</h4>
+                <p class="author-role">Đại Lý Bánh Tráng & Nông Sản (Hải Châu, Đà Nẵng)</p>
+                <span class="verified-tag">✓ Đối tác hơn 4 năm</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 4: 4 sao -->
+          <article class="review-card" data-rating="4">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="4 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+              </div>
+              <span class="review-date">2 tuần trước</span>
+            </div>
+            <p class="review-comment">
+              "Chất lượng bánh ram chiên giòn đỉnh chóp, vàng ươm để lâu vẫn giòn rụm. Đợt lễ vừa rồi nhà xe giao trễ hơn nửa buổi do bão, nhưng Chị Thanh chủ động gọi thông báo và hỗ trợ nhiệt tình nên rất ưng ý."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">TV</div>
+              <div class="author-meta">
+                <h4 class="author-name">Anh Tuấn Vũ</h4>
+                <p class="author-role">Quản Lý Chuỗi Nem Nướng & Bún Đậu (Lê Chân, Hải Phòng)</p>
+                <span class="verified-tag">✓ Đã xác thực đơn hàng</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 5: 5 sao -->
+          <article class="review-card" data-rating="5">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <span class="review-date">3 tuần trước</span>
+            </div>
+            <p class="review-comment">
+              "Bánh mè nhúng nướng than hoặc nhúng nước cuốn thịt luộc ngon chuẩn vị quê ngoại ngày xưa. Thơm nồng mùi gạo mới và vỉ tre mộc mạc, gia đình mình ăn từ hồi nhỏ đến giờ vẫn trung thành với Lâm Thanh."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">TT</div>
+              <div class="author-meta">
+                <h4 class="author-name">Bạn Thu Trang</h4>
+                <p class="author-role">Khách Đặt Ăn Gia Đình (Đà Lạt, Lâm Đồng)</p>
+                <span class="verified-tag">✓ Khách hàng thân thiết</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 6: 5 sao -->
+          <article class="review-card" data-rating="5">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 trên 5 sao">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <span class="review-date">1 tháng trước</span>
+            </div>
+            <p class="review-comment">
+              "Bánh cuốn mềm dẻo, cuốn nem chua hay rau rừng rất êm tay. Bánh tráng thủ công lò Xóm Rượu đúng là cái nôi danh bất hư truyền. Xưởng làm việc chuyên nghiệp, gửi mẫu thử tận nơi rất chu đáo."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar-badge">TH</div>
+              <div class="author-meta">
+                <h4 class="author-name">Chị Thanh Hà</h4>
+                <p class="author-role">Bếp Trưởng Nhà Hàng Ẩm Thực Cuốn (Thủ Dầu Một, Bình Dương)</p>
+                <span class="verified-tag">✓ Hợp tác dài hạn</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PHẦN LIÊN HỆ TRỰC TIẾP NHÀ XƯỞNG (LIÊN HỆ TRỰC TIẾP) -->
+    <section class="section" id="lien-he">
+      <div class="container">
+        <!-- Direct Contact Section (2 Options: Chị Thanh & Anh Lâm + Inquiry Form) -->
+        <div class="direct-contact-box">
+          <div class="section-header text-center mx-auto" style="margin-bottom: 32px;">
+            <span class="section-label">Kết Nối Trực Tiếp Nhà Xưởng</span>
+            <h2 class="section-title" style="font-size: 2.2rem;">Liên Hệ Trực Tiếp Nhà Xưởng Lâm Thanh</h2>
+            <p class="section-desc mx-auto" style="font-size: 0.9375rem;">
+              Tư vấn trực tiếp chính sách giá xưởng, quy cách đóng gói cho quán ăn, và thỏa thuận cung ứng số lượng
+              lớn lâu dài.
+            </p>
+          </div>
+
+          <!-- 2 Contact Person Cards -->
+          <div class="contact-cards-grid">
+            <!-- Card Chị Thanh -->
+            <div class="direct-person-card">
+              <div class="person-card-header">
+                <img src="picture/Thanh.jpg" alt="Chị Thanh" class="person-card-avatar-img">
+                <div>
+                  <h3 class="person-card-title">Chị Thanh (Hứa Thanh)</h3>
+                </div>
+              </div>
+              <div class="person-actions-row">
+                <a href="tel:0935746795" class="btn btn-primary">
+                  <span>📞 0935 746 795</span>
+                </a>
+                <a href="https://zalo.me/0935746795" target="_blank" rel="noopener" class="btn btn-green">
+                  <span>Nhắn Zalo</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Anh Lâm -->
+            <div class="direct-person-card">
+              <div class="person-card-header">
+                <img src="picture/Lam.png" alt="Anh Lâm" class="person-card-avatar-img">
+                <div>
+                  <h3 class="person-card-title">Anh Lâm</h3>
+                </div>
+              </div>
+              <div class="person-actions-row">
+                <a href="tel:0786222458" class="btn btn-primary">
+                  <span>📞 0786 222 458</span>
+                </a>
+                <a href="https://zalo.me/0786222458" target="_blank" rel="noopener" class="btn btn-green">
+                  <span>Nhắn Zalo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. TOAST NOTIFICATION -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+    <span id="toastText">Đang kết nối liên hệ...</span>
+  </div>
+
+  <!-- 8. STICKY MOBILE DOCK (2 DIRECT CALL OPTIONS FOR SMARTPHONE USERS) -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="tel:0935746795" class="btn btn-primary" aria-label="Gọi Chị Thanh">
+      <span>📞 Chị Thanh: 0935 746 795</span>
+    </a>
+    <a href="tel:0786222458" class="btn btn-secondary" aria-label="Gọi Anh Lâm">
+      <span>📞 Anh Lâm: 0786 222 458</span>
+    </a>
+  </div>
+
+  <!-- 9. MINIMAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h3>Bánh Tráng Lâm Thanh</h3>
+          <p>
+            Kế thừa ngọn lửa trăm năm của làng nghề Bánh tráng Xóm Rượu, Cơ sở Lâm Thanh tự hào là nhà xưởng quy mô lớn
+            cung ứng bánh ram chiên giòn, bánh ram cuốn và bánh mè nhúng chất lượng cao đến các đối tác toàn quốc.
+          </p>
+          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 0.8125rem;">
+            <span>📍 Địa chỉ xưởng: Làng nghề Xóm Rượu, Phường Ninh Hiệp, Thị xã Ninh Hòa, Tỉnh Khánh Hòa</span>
+            <span>📞 <strong>Chị Thanh:</strong> 0935 746 795</span>
+            <span>📞 <strong>Anh Lâm:</strong> 0786 222 458</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Dòng Sản Phẩm</h4>
+          <ul>
+            <li><a href="#san-pham">Bánh Ram Ống Chiên Giòn 8h</a></li>
+            <li><a href="#san-pham">Bánh Ram Vuông Cuốn Nem</a></li>
+            <li><a href="#san-pham">Bánh Mè Nhúng Phơi Liếp Tre</a></li>
+            <li><a href="#san-pham">Bánh Tráng Đặt Theo Quy Cách</a></li>
+          </ul>
+        </div>
+
+        <!-- Heritage & Policy -->
+        <div class="footer-col">
+          <h4>Di Sản & Cam Kết</h4>
+          <ul>
+            <li><a href="#xom-ruou">Di Sản Bánh Tráng Xóm Rượu</a></li>
+            <li><a href="#quy-trinh">100% Gạo Quê Chọn Lọc</a></li>
+            <li><a href="#danh-gia">Đánh Giá Từ Khách Hàng</a></li>
+            <li><a href="#lien-he">Liên Hệ & Đặt Hàng Trực Tiếp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cơ Sở Sản Xuất Bánh Tráng Lâm Thanh. Gìn giữ tinh hoa làng nghề đất Khánh.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
